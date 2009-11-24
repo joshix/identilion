@@ -19,7 +19,7 @@
 - (void)setupPrototypes {
 	if (groups != nil) return;
 	
-	NSArray *g1 = [NSArray arrayWithObjects:[UICPrototypeTableCell cellForTitle:@"Twitter Account"], nil];	
+	NSArray *g1 = [NSArray arrayWithObjects:[UICPrototypeTableCell cellForTitle:@"µblog Account"], nil];	
 	NSArray *g2 = [NSArray arrayWithObjects:
 				   [UICPrototypeTableCell cellForSelect:@"Auto refresh" 
 									   withSelectTitles:[NSArray arrayWithObjects:
@@ -67,7 +67,7 @@
 				   nil];
 
 	NSArray *g5 = [NSArray arrayWithObjects:
-				   [UICPrototypeTableCell cellForTitle:@"About NatsuLion for iPhone"],
+				   [UICPrototypeTableCell cellForTitle:@"About Identilion"],
 				   nil];
 	
 	groups = [[NSArray arrayWithObjects:
