@@ -17,7 +17,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self.navigationItem setTitle:@"Copyright Notice"];
+	[self.navigationItem setTitle:@"About"];
 
 	self.view = [NTLNWebView sharedInstance];
 	[(NTLNWebView*)self.view setDelegate:self];
