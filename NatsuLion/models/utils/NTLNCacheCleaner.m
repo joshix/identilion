@@ -28,8 +28,8 @@ static NTLNCacheCleaner *_instance;
     [[NSUserDefaults standardUserDefaults] synchronize];
 	
 	if (n >= 3) {
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"An unexpected abort detected"
-														 message:@"Probably it was caused by cached data. Would you like to delete all cached data?"
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Oops. We're dead."
+														 message:@"Culprit may be cache corruption. Delete cache and reload?"
 														delegate:self
 												cancelButtonTitle:@"Cancel" 
 											   otherButtonTitles:@"OK", nil] autorelease];
