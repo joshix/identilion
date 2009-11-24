@@ -64,7 +64,7 @@
 - (void)viewDidLoad {
 	[self setupTableView];
 	((UITableView*)self.view).autoresizesSubviews = YES;
-	[self.navigationItem setTitle:@"Tweet"];
+	[self.navigationItem setTitle:@"Status"];
 }
 
 - (void)makeLinks {

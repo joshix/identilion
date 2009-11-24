@@ -54,7 +54,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style {
 	if (self = [super initWithStyle:style]) {
-		[self.navigationItem setTitle:@"Twitter Account"];
+		[self.navigationItem setTitle:@"µblog Account"];
 	}
 	return self;
 }

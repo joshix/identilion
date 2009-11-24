@@ -7,7 +7,7 @@
 #import "NTLNMentionsViewController.h"
 #import "NTLNHttpClientPool.h"
 
-#define TITLE_NAME @"NatsuLion for iPhone"
+#define TITLE_NAME @"Identilion"
 
 @implementation NTLNFriendsViewController
 

@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>NatsuLion</string>
+	<string>Identilion</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>icon.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.natsulion.natsuliphone</string>
+	<string>net.utopian.labs.identilion</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.51</string>
+	<string>1.51.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIStatusBarStyle</key>
@@ -33,10 +33,10 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>natsulion</string>
+				<string>Identilion</string>
 			</array>
 			<key>CFBundleURLName</key>
-			<string>org.natsulion.natsuliphoneprotocol</string>
+			<string>net.utopian.labs.identilionprotocol</string>
 		</dict>
 	</array>
 </dict>

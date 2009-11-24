@@ -15,7 +15,7 @@
 }
 
 - (void)getUserInfo:(NSString*)q {
-	NSString *url = [NSString stringWithFormat:@"http://twitter.com/users/show/%@.xml", q];
+	NSString *url = [NSString stringWithFormat:@"http://identi.ca/api/users/show/%@.xml", q];
 	[super requestGET:url];
 }
 
@@ -28,7 +28,7 @@
 }
 
 - (void)getFollowingsWithScreenName:(NSString*)screen_name page:(int)page {
-	NSString *url = [NSString stringWithFormat:@"http://twitter.com/statuses/friends/%@.xml", screen_name];
+	NSString *url = [NSString stringWithFormat:@"http://identi.ca/api/statuses/friends/%@.xml", screen_name];
 	if (page > 1) {
 		url = [NSString stringWithFormat:@"%@?page=%d", url, page];
 	}
@@ -36,7 +36,7 @@
 }
 
 - (void)getFollowersWithScreenName:(NSString*)screen_name page:(int)page {
-	NSString *url = [NSString stringWithFormat:@"http://twitter.com/statuses/followers/%@.xml", screen_name];
+	NSString *url = [NSString stringWithFormat:@"http://identi.ca/api/statuses/followers/%@.xml", screen_name];
 	if (page > 1) {
 		url = [NSString stringWithFormat:@"%@?page=%d", url, page];
 	}

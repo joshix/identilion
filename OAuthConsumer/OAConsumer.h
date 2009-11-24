@@ -26,7 +26,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface OAConsumer : NSObject {
 @protected
 	NSString *key;

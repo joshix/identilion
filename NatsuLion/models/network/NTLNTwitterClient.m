@@ -16,7 +16,7 @@
 /// private methods
 
 + (NSString*)URLForTwitterWithAccount {
-	return @"http://twitter.com/";
+	return @"https://identi.ca/api/";
 }
 
 - (void)getTimeline:(NSString*)path page:(int)page count:(int)count since_id:(NSString*)since_id {
@@ -32,7 +32,7 @@
 	requestPage = page;
 	parseResultXML = YES;
 	requestForTimeline = YES;
-	
+
 #ifdef ENABLE_OAUTH
 	[super requestGET:url];
 #else	
@@ -89,8 +89,8 @@
 				}
 								
 			} else {
-				[[NTLNAlert instance] alert:@"Invaild XML Format" 
-								withMessage:@"Twitter responded invalid format message, or please check your network environment."];
+				[[NTLNAlert instance] alert:@"Invalid XML format" 
+								withMessage:@"Invalid message format, or please check your network environment."];
 				[delegate twitterClientFailed:self];
 			}
 		} else {
@@ -101,7 +101,7 @@
 		if (statusCode != 304) {
 			switch (statusCode) {
 				case 400:
-					[[NTLNAlert instance] alert:@"Twitter: exceeded the rate limit" 
+					[[NTLNAlert instance] alert:@"Exceeded service rate limit" 
 									withMessage:[NSString 
 												 stringWithFormat:@"The client has exceeded the rate limit. Clients are allowed %d requests per hour time period. The period will be in %@.", 
 												 [NTLNRateLimit shardInstance].rate_limit,
@@ -122,11 +122,11 @@
 					break;
 				default:
 					{
-						NSString *msg = [NSString stringWithFormat:@"Twitter responded %d", statusCode];
+						NSString *msg = [NSString stringWithFormat:@"Service responded: %d", statusCode];
 						if (requestForTimeline) {
 							[[NTLNAlert instance] alert:@"Retrieving timeline failed" withMessage:msg];
 						} else {
-							[[NTLNAlert instance] alert:@"Sending a message failed" withMessage:msg];
+							[[NTLNAlert instance] alert:@"Sending message failed" withMessage:msg];
 						}
 					}
 					break;
@@ -226,10 +226,10 @@
 						[NTLNTwitterClient URLForTwitterWithAccount]];
 	NSString *postString; 
 	if (reply_id == nil) { 
-		postString = [NSString stringWithFormat:@"status=%@&source=NatsuLiphone",  
+		postString = [NSString stringWithFormat:@"status=%@&source=Identilion",  
 					  [NTLNXMLHTTPEncoder encodeHTTP:tweet]]; 
 	} else { 
-		postString = [NSString stringWithFormat:@"status=%@&in_reply_to_status_id=%@&source=NatsuLiphone",  
+		postString = [NSString stringWithFormat:@"status=%@&in_reply_to_status_id=%@&source=Identilion",  
 					  [NTLNXMLHTTPEncoder encodeHTTP:tweet], 
 					  reply_id]; 
 	}
