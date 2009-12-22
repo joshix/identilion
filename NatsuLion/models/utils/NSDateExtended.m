@@ -21,11 +21,13 @@
 	} else if (d < 60) {
 		return @"less than a minute ago";
 	} else if (d < 45*60 ) {
-		return [NSString stringWithFormat:@"about %d minute ago", d/60];
+		return [NSString stringWithFormat:@"about %d minutes ago", d/60];
 	} else if (d < 24*60*60) {
 		int h = d/3600;
-		if (h < 1) h = 1;
-		return [NSString stringWithFormat:@"about %d hour ago",h];
+		if (h < 1) {
+			h = 1;
+		}
+		return [NSString stringWithFormat:@"about %d hours ago",h];
 	}
 	
 	char tmp[80];
