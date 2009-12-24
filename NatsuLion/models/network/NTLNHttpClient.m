@@ -53,7 +53,7 @@
 	
 	*p = '\0';
 	
-	NSString *ret = [NSString stringWithCString:tmp];
+	NSString *ret = [NSString stringWithCString:tmp encoding:(NSStringEncoding)NSUTF8StringEncoding];
 	free(tmp);
 
 	return ret;
