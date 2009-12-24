@@ -30,7 +30,7 @@
 	
 	UIButton *moreButton;
 				
-	// Accerlerometer
+	// Accelerometer
 	UIView *tableViewSuperView;
 	CGRect tableViewOriginalFrame;		
 	
