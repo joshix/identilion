@@ -32,7 +32,7 @@
 	
 	char tmp[80];
 	struct tm *tm_ = localtime(&t);
-	strftime(tmp, sizeof(tmp), "%I:%M %p %b %dth", tm_);
+	strftime(tmp, sizeof(tmp), "%I:%M %p %b %d", tm_);
 	return [NSString stringWithUTF8String:tmp];
 }
 
@@ -47,7 +47,7 @@
 	if (d < 24*60*60) {
 		strftime(tmp, sizeof(tmp), "%I:%M %p", tm_);
 	} else {
-		strftime(tmp, sizeof(tmp), "%b %dth", tm_);
+		strftime(tmp, sizeof(tmp), "%b %d", tm_);
 	}
 	return [NSString stringWithUTF8String:tmp];
 }
@@ -70,7 +70,7 @@
 	
 	char tmp[80];
 	struct tm *tm_ = localtime(&t);
-	strftime(tmp, sizeof(tmp), "%I:%M %p %b %dth", tm_);
+	strftime(tmp, sizeof(tmp), "%I:%M %p %b %d", tm_);
 	return [NSString stringWithUTF8String:tmp];
 }
 
