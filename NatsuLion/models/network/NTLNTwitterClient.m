@@ -16,7 +16,9 @@
 /// private methods
 
 + (NSString*)URLForTwitterWithAccount {
-	return @"https://identi.ca/api/";
+//	return @"https://identi.ca/api/";
+	NSString *srv = [[NTLNAccount sharedInstance] serverURI];
+	return srv;
 }
 
 - (void)getTimeline:(NSString*)path page:(int)page count:(int)count since_id:(NSString*)since_id {

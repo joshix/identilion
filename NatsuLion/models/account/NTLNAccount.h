@@ -3,6 +3,7 @@
 
 @interface NTLNAccount : NSObject {
 	OAToken *userToken;
+	NSString *serverURI;
 	NSString *screenName;
 	NSString *password;
 }
@@ -12,6 +13,9 @@
 - (BOOL)valid;
 
 - (void)update;
+
+- (void)setServerURI:(NSString*)serverURI;
+- (NSString*)serverURI;
 
 - (void)setScreenName:(NSString*)screenName;
 - (NSString*)screenName;

@@ -17,6 +17,10 @@
 
 - (void)setupPrototypes {
 	if (groups != nil) return;
+
+	UICPrototypeTableCellTextInput *c0 = [UICPrototypeTableCell cellForTextInput:(NSString *)@"API URI"
+																 withPlaceholder:(NSString *)@"https://identi.ca/api/"
+															 withUserDefaultsKey:NTLN_PREFERENCE_SRV];
 	
 	UICPrototypeTableCellTextInput *c1 = [UICPrototypeTableCell cellForTextInput:@"Username" 
 																 withPlaceholder:@"required" 
@@ -27,7 +31,7 @@
 															 withUserDefaultsKey:NTLN_PREFERENCE_PASSWORD];
 	c2.secure = YES;
 	
-	NSArray *g1 = [NSArray arrayWithObjects:c1, c2, nil];	
+	NSArray *g1 = [NSArray arrayWithObjects:c0, c1, c2, nil];	
 	
 	groups = [[NSArray arrayWithObjects:
 			   [UICPrototypeTableGroup groupWithCells:g1 withTitle:nil], 

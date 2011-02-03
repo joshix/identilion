@@ -16,17 +16,31 @@ GTMOBJECT_SINGLETON_BOILERPLATE(NTLNAccount, sharedInstance)
 }
 
 - (void)update {
+	[serverURI release];
 	[screenName release];
 	[password release];
 
+	serverURI = [[[NSUserDefaults standardUserDefaults] stringForKey:NTLN_PREFERENCE_SRV] retain];
 	screenName = [[[NSUserDefaults standardUserDefaults] stringForKey:NTLN_PREFERENCE_USERID] retain];
 	password = [[[NSUserDefaults standardUserDefaults] stringForKey:NTLN_PREFERENCE_PASSWORD] retain];
 }
 
 - (void) dealloc {
 	[userToken release];
+	[serverURI release];
 	[screenName release];
     [super dealloc];
+}
+
+- (void)setServerURI:(NSString*)srv {
+	[serverURI release];
+	serverURI = [srv retain];
+	[[NSUserDefaults standardUserDefaults] setObject:serverURI forKey:NTLN_PREFERENCE_SRV];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSString*)serverURI {
+	return serverURI;
 }
 
 - (void)setScreenName:(NSString*)sn {

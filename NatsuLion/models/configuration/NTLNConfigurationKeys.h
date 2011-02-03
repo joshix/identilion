@@ -1,3 +1,4 @@
+#define NTLN_PREFERENCE_SRV						@"server"
 #define NTLN_PREFERENCE_USERID					@"userId"
 #define NTLN_PREFERENCE_PASSWORD				@"password"
 #define NTLN_PREFERENCE_TWITTER_USERID			@"twitter_user_id"
