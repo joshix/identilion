@@ -32,10 +32,10 @@
 														 @"10 Minutes", nil]
 									withUserDefaultsKey:NTLN_PREFERENCE_REFRESH_INTERVAL],
 					
-				   [UICPrototypeTableCell cellForSwitch:@"UseSafari" 
+				   [UICPrototypeTableCell cellForSwitch:@"Open links in Safari" 
 									withUserDefaultsKey:NTLN_PREFERENCE_USE_SAFARI],
 
-				   [UICPrototypeTableCell cellForSwitch:@"Dark color theme" 
+				   [UICPrototypeTableCell cellForSwitch:@"Dark theme" 
 									withUserDefaultsKey:NTLN_PREFERENCE_DARK_COLOR_THEME],
 				   
 				   [UICPrototypeTableCell cellForSwitch:@"Shake to fullscreen" 
@@ -43,10 +43,7 @@
 				   nil];
 	
 	NSArray *g3 = [NSArray arrayWithObjects:
-				   [UICPrototypeTableCell cellForSwitch:@"AutoPagerize" 
-									withUserDefaultsKey:NTLN_PREFERENCE_SHOW_MORE_TWEETS_MODE],
-
-				   [UICPrototypeTableCell cellForSelect:@"Initial load" 
+				   [UICPrototypeTableCell cellForSelect:@"Initial fetch" 
 									   withSelectTitles:[NSArray arrayWithObjects:
 														 @"20 posts", 
 														 @"50 Posts", 
@@ -54,10 +51,13 @@
 														 @"200 Posts", nil]
 									withUserDefaultsKey:NTLN_PREFERENCE_FETCH_COUNT],
 
-				   [UICPrototypeTableCell cellForSwitch:@"AutoScroll" 
+				   [UICPrototypeTableCell cellForSwitch:@"Scroll to first unread" 
 									withUserDefaultsKey:NTLN_PREFERENCE_AUTO_SCROLL],
+
+				   [UICPrototypeTableCell cellForSwitch:@"Fetch more on scroll" 
+									withUserDefaultsKey:NTLN_PREFERENCE_SHOW_MORE_TWEETS_MODE],
 				   
-				   [UICPrototypeTableCell cellForSwitch:@"Left-Handed controls" 
+				   [UICPrototypeTableCell cellForSwitch:@"Left-handed controls" 
 									withUserDefaultsKey:NTLN_PREFERENCE_LEFTHAND],
 				   
 				   nil];
