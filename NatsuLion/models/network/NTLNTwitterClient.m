@@ -16,7 +16,7 @@
 /// private methods
 
 + (NSString*)URLForTwitterWithAccount {
-//	return @"https://identi.ca/api/";
+//	return @"https://identi.ca/api/"; //For now inherit assumption that root slash trails host part. Rather it lead q part.
 	NSString *srv = [[NTLNAccount sharedInstance] serverURI];
 	return srv;
 }
