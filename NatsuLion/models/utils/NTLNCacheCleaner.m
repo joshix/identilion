@@ -36,6 +36,17 @@ static NTLNCacheCleaner *_instance;
 		[alert show];
 		return YES;
 	}
+
+	/* 
+	 * To wire up this Settings.app panel for cache clearing,
+	 * add the Settings.bundle file to the project, and check
+	 * that it was added to Targets->Identilion->Copy Bundle Resources step.
+	 */
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ClearCache"]) {
+		[NTLNCache removeAllCachedData];
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"ClearCache"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
 	
 	return NO;
 }
