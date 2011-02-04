@@ -104,7 +104,7 @@
 	directMessageViewController.tabBarItem  = nsdm.tabBarItem; // is it need (to show badge)?
 	
 	[nsen.navigationBar setBarStyle:UIBarStyleBlackOpaque];
-	[nsen.tabBarItem setTitle:@"Sents"];
+	[nsen.tabBarItem setTitle:@"Sent"];
 	[nsen.tabBarItem setImage:[UIImage imageNamed:@"sent.png"]];
 
 	[nunr.navigationBar setBarStyle:UIBarStyleBlackOpaque];

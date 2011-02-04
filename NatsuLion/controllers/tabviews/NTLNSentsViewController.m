@@ -16,7 +16,7 @@
 - (void)setupNavigationBar {
 	[super setupNavigationBar];
 	[super setupPostButton];
-	[self.navigationItem setTitle:@"Sents"];
+	[self.navigationItem setTitle:@"Sent"];
 }
 
 - (void)timeline:(NTLNTimeline*)tl requestForPage:(int)page since_id:(NSString*)since_id {
