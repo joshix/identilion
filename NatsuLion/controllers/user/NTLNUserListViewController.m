@@ -118,6 +118,10 @@
 	NTLNTwitterUserClient *c = [[NTLNHttpClientPool sharedInstance] 
 								idleClientWithType:NTLNHttpClientPoolClientType_TwitterUserClient];
 	c.delegate = self;
+	/* 
+	 * Either one of these work in testing, but are fired at the same UI point.
+	 * Need to wire UI for both in TwitterUserClient.(?) -JW
+	 */
 //	[c getFollowersWithScreenName:screenName page:1];
 	[c getFollowingsWithScreenName:screenName page:1];
 }
