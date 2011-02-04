@@ -28,6 +28,8 @@
 	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>UIPrerenderedIcon</key>
 	<false/>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
