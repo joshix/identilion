@@ -9,6 +9,14 @@
 @synthesize delegate;
 @synthesize users;
 
+/* This is just like the private fn [NTLNTwitterClient URLForTwitterWithAccount] */
+// Private
++ (NSString*)URLForMicroblogWithAccount {
+	//	return @"https://identi.ca/api/"; //For now inherit assumption that root slash trails host part. Rather it lead q part.
+	NSString *srv = [[NTLNAccount sharedInstance] serverURI];
+	return srv;
+}
+
 - (void)dealloc {
 	[users release];
 	[delegate release];
@@ -16,7 +24,7 @@
 }
 
 - (void)getUserInfo:(NSString*)q {
-	NSString *url = [NSString stringWithFormat:@"%@users/show/%@.xml", [NTLNTwitterClient URLForTwitterWithAccount], q]; //could subclass or duplicate this fn to quell a build warn.
+	NSString *url = [NSString stringWithFormat:@"%@users/show/%@.xml", [NTLNTwitterUserClient URLForMicroblogWithAccount], q];
 	[super requestGET:url];
 }
 
@@ -29,7 +37,7 @@
 }
 
 - (void)getFollowingsWithScreenName:(NSString*)screen_name page:(int)page {
-	NSString *url = [NSString stringWithFormat:@"%@statuses/friends/%@.xml", [NTLNTwitterClient URLForTwitterWithAccount], screen_name];
+	NSString *url = [NSString stringWithFormat:@"%@statuses/friends/%@.xml", [NTLNTwitterUserClient URLForMicroblogWithAccount], screen_name];
 	if (page > 1) {
 		url = [NSString stringWithFormat:@"%@?page=%d", url, page];
 	}
@@ -37,7 +45,7 @@
 }
 
 - (void)getFollowersWithScreenName:(NSString*)screen_name page:(int)page {
-	NSString *url = [NSString stringWithFormat:@"%@statuses/followers/%@.xml", [NTLNTwitterClient URLForTwitterWithAccount], screen_name];
+	NSString *url = [NSString stringWithFormat:@"%@statuses/followers/%@.xml", [NTLNTwitterUserClient URLForMicroblogWithAccount], screen_name];
 	if (page > 1) {
 		url = [NSString stringWithFormat:@"%@?page=%d", url, page];
 	}
