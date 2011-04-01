@@ -20,26 +20,30 @@
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.51.5</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackOpaque</string>
-	<key>UIPrerenderedIcon</key>
-	<false/>
-	<key>UIApplicationExitsOnSuspend</key>
-	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>net.utopian.labs.identilionprotocol</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>Identilion</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string>net.utopian.labs.identilionprotocol</string>
 		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.51.5</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+	<key>UIPrerenderedIcon</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 </dict>
 </plist>
