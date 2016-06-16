@@ -30,7 +30,7 @@ static NTLNIconRepository *_instance = nil;
 }
 
 - (id)initWithIconURL:(NSString*)theUrl {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		url = [theUrl retain];
 	}
 	return self;

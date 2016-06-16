@@ -11,7 +11,7 @@
 @synthesize friendsViewController;
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		timeline = [[NTLNTimeline alloc] initWithDelegate:self 
 									  withArchiveFilename:@"replies.plist"];
 		timeline.readTracker = YES;
